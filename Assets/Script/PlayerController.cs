@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour {
 	public bool isSlide = false;
 	public bool SideCheck;
 	public WaitForSeconds slidetime;
+
 	void Start () {
 		anim = GetComponent<Animator> ();
 		rb2d = GetComponent<Rigidbody2D> ();
@@ -59,16 +60,12 @@ public class PlayerController : MonoBehaviour {
 		//Player direction
 		if (translationX > 0 && !viradoDireita) {
 			Flip (); 
-		//	SideCheck = false;
 		} else if (translationX < 0 && viradoDireita)
 			Flip (); 
-		//SideCheck = false;
 		if (translationX > 0 && !viradoDireita) {
 			Flip ();
-		//	SideCheck = true;
 		} else if (translationX < 0 && viradoDireita) {
 			Flip ();
-		//	SideCheck = true;
 		}
 	}
 	void Fall()
@@ -78,8 +75,10 @@ public class PlayerController : MonoBehaviour {
 			anim.ResetTrigger ("Jump");
 			bc.size = new Vector3 (0.4929347f, 0.9783585f, 0);
 			bc.offset = new Vector3 (0.1226404f, -0.0627588f, 0);
+			Debug.Log ("Fall");
 		}
 		if (tocaChao) {
+			Debug.Log ("tocachao");
 			anim.SetBool ("Fall", false);
 		}
 	}
@@ -109,15 +108,10 @@ public class PlayerController : MonoBehaviour {
 		anim.SetTrigger ("isSliding");
 		slidecol.enabled = true;
 		bc.enabled = false;
-		/*if (SideCheck == true) {
-			rb2d.AddForce (Vector2.right * slideSpeed);
-		} else {
-			rb2d.AddForce (Vector2.left * slideSpeed);
-		}*/
 		StartCoroutine ("stopSlide");
 	}
 		IEnumerator stopSlide(){
-		yield return new WaitForSeconds(1.5f);
+		yield return new WaitForSeconds(1f);
 		anim.SetTrigger ("Stand Hand");
 		slidecol.enabled = false;
 		bc.enabled = true;
