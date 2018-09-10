@@ -117,17 +117,20 @@ public class PlayerController : MonoBehaviour {
 		bc.enabled = true;
 		isSlide = false;
 		}
-	}
-	/*void  OnTriggerEnter2D (Collider2D other){
-		if (other.gameObject.CompareTag ("Obstaculo")) {
-			anim.SetTrigger ("Hurt");
-			jump = false;
-			attack = false;
-			sliding = false;
-			anim.SetTrigger ("Stand");
-			Update ();
 
-		}*/
+	 void  OnTriggerEnter2D (Collider2D other){
+		if (other.gameObject.CompareTag ("Obstacle")) {
+			if (tocaChao) {
+				anim.SetTrigger ("Hurt");
+			} else {
+				anim.SetTrigger ("Fall Hurt");
+			}
+			jump = false;
+			anim.SetTrigger ("Stand Hand");
+			Update ();
+	   }
+    }
+}
 
 	//Método de dano do player
 	/*public void SubtraiVida()
