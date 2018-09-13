@@ -8,7 +8,6 @@ public class PlayerController : MonoBehaviour {
 	private Animator anim;
 	private Rigidbody2D rb2d;
 	public Transform posPe;
-	public Transform posSide;
 	[HideInInspector] public bool tocaChao = false;
 	public float Velocidade;
 	public float ForcaPulo = 1000f;
@@ -31,13 +30,11 @@ public class PlayerController : MonoBehaviour {
 		//The groundcheck
 		tocaChao = Physics2D.Linecast (transform.position, posPe.position, 1 << LayerMask.NameToLayer ("Ground"));
 		Fall ();
-	
 		if (Input.GetKeyDown("space")) {
 			bc.size = new Vector3 (0.5509329f, 0.820936f, 0);
 			bc.offset = new Vector3 (0.1267829f, 0.820936f, 0);
 			Jump ();
 		}
-			
 		if (Input.GetKeyDown (KeyCode.LeftShift)) {
 			Doslide ();
 		}
@@ -70,7 +67,7 @@ public class PlayerController : MonoBehaviour {
 		} else if (translationX < 0 && viradoDireita) {
 			Flip ();
 		}
-}
+	}
 	void Fall()
 	{
 		if (!tocaChao && rb2d.velocity.y <= 0) {    
@@ -131,8 +128,8 @@ public class PlayerController : MonoBehaviour {
 			jump = false;
 			anim.SetTrigger ("Stand Hand");
 			Update ();
-		}
-		}
+	   }
+    }
 }
 
 	//Método de dano do player
