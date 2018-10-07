@@ -7,45 +7,55 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour {
 	private Animator anim;
 	private Rigidbody2D rb2d;
-	public Transform posPe;
+	public Transform posPe, WallCheck;
 	public LayerMask Ground;
-	public Transform WallCheck;
-	[HideInInspector] public bool touchWall = false;
-	[HideInInspector] public bool tocaChao = false;
-	public float Velocidade;
-	public float ForcaPulo = 1000f;
-	[HideInInspector] public bool viradoDireita = true, Jumping;
-	public bool jump;
-	public BoxCollider2D bc;
-	public BoxCollider2D slidecol;
-	public float slideSpeed = 5f;
-	public bool isSlide = false;
-	public bool SideCheck;
+	[HideInInspector] public bool touchWall = false, tocaChao = false, viradoDireita = true;
+	public float ForcaPulo = 1000f,  Velocidade, slideSpeed = 5f, TimeMaxCombo = 0.1f, TimeCombo = 0f;
+	public bool jump,  SideCheck, isSlide = false, isAlive = true;
+	public BoxCollider2D bc, slidecol;
 	public WaitForSeconds slidetime;
+	public int AnimaCombo = 0, Health;
 
 	void Start () {
 		anim = GetComponent<Animator> ();
 		rb2d = GetComponent<Rigidbody2D> ();
 		bc = bc.GetComponent<BoxCollider2D> ();
 		slidecol.enabled = false;
+		TimeMaxCombo=0.1f;
 	}
 	void Update () {
 		//The groundcheck
+		if(isAlive == false){
+			return;
+		}
 		tocaChao = Physics2D.Linecast (transform.position, posPe.position, 1 << LayerMask.NameToLayer ("Ground"));
 		touchWall = Physics2D.Linecast (transform.position, WallCheck.position, 1 << LayerMask.NameToLayer ("Ground"));
 		Fall ();
 		if (Input.GetKeyDown("space")) {
-			bc.size = new Vector3 (0.5509329f, 0.820936f, 0);
-			bc.offset = new Vector3 (0.1267829f, 0.820936f, 0);
+			bc.size = new Vector3 (0.4929347f, 0.8221698f, 0);
+			bc.offset = new Vector3 (0.1226404f, 0.01533556f, 0);
 			Jump ();
 		}
-			
 		if (Input.GetKeyDown (KeyCode.LeftShift)) {
 			Doslide ();
 		}
+		if (Input.GetKeyDown (KeyCode.U)) {
+			AttackSword ();
+		}
+		if (Input.GetKeyDown (KeyCode.J)) {
+			AttackHand ();
+		}
+		if (TimeCombo > TimeMaxCombo) {
+			AnimaCombo = 0;
+			TimeCombo = 0f;
+		}
 	}
+
 	void FixedUpdate()
 	{
+		if(isAlive == false){
+			return;
+		}
 		if( touchWall ) {
 			anim.SetBool ("Wall Slide", true);
 			anim.SetBool ("Fall", false);
@@ -93,7 +103,6 @@ public class PlayerController : MonoBehaviour {
 			Debug.Log ("Fall");
 		}	
 		if (tocaChao) {
-			Debug.Log ("tocachao");
 			anim.SetBool ("Fall", false);
 			anim.SetBool ("Wall Slide", false);
 		}
@@ -103,7 +112,7 @@ public class PlayerController : MonoBehaviour {
 			rb2d.AddForce (new Vector2 (0f, ForcaPulo));
 			anim.SetTrigger ("Jump");
 			anim.SetBool ("Wall Slide", false);
-			Jumping = true;
+
 		}
 }
 	//Flip script
@@ -135,25 +144,40 @@ public class PlayerController : MonoBehaviour {
 		bc.enabled = true;
 		isSlide = false;
 		}
+	void AttackHand(){
+		TimeCombo = +Time.deltaTime;
+		if (tocaChao && AnimaCombo == 0) {
+			anim.SetTrigger ("Punch1");
+			//AnimaCombo = 1;
+		}
+		if (tocaChao && AnimaCombo == 1) {
+			anim.SetTrigger ("Punch2");
+			AnimaCombo = 2;
+		}
+		Debug.Log (TimeCombo);
+		}
+	void AttackSword (){
+		if (tocaChao && AnimaCombo == 0) {
+			anim.SetTrigger ("Sword1");
+		//	AnimaCombo = 1;
+		}
+	}
 	 void  OnTriggerEnter2D (Collider2D other){
 		if (other.gameObject.CompareTag ("Obstacle")) {
 			if (tocaChao) {
 				anim.SetTrigger ("Hurt");
+				Health--;
 			} else {
 				anim.SetTrigger ("Fall Hurt");
+				Health--;
+			}
+			if (Health < 1) {
+				anim.SetTrigger("Dead");
+				isAlive = false;
 			}
 			jump = false;
 			anim.SetTrigger ("Stand Hand");
 			Update ();
 		}
-		}
+	}
 }
-
-	//Método de dano do player
-	/*public void SubtraiVida()
-	
-		vida.fillAmount-=0.1f;
-		if (vida.fillAmount <= 0) {
-			MC.GameOver();
-			Destroy(gameObject);
-		}*/
