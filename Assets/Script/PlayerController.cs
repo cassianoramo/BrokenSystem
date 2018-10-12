@@ -44,6 +44,7 @@ public class PlayerController : MonoBehaviour {
 		}
 		if (Input.GetKeyDown (KeyCode.J)) {
 			AttackHand ();
+		
 		}
 		if (TimeCombo > TimeMaxCombo) {
 			AnimaCombo = 0;
@@ -145,21 +146,19 @@ public class PlayerController : MonoBehaviour {
 		isSlide = false;
 		}
 	void AttackHand(){
-		TimeCombo = +Time.deltaTime;
 		if (tocaChao && AnimaCombo == 0) {
 			anim.SetTrigger ("Punch1");
-			//AnimaCombo = 1;
-		}
-		if (tocaChao && AnimaCombo == 1) {
+			AnimaCombo = 1;
+		} else if (tocaChao && AnimaCombo == 1) {
 			anim.SetTrigger ("Punch2");
 			AnimaCombo = 2;
+		} else if (tocaChao && AnimaCombo == 2) {
+			anim.SetTrigger ("Punch3");
 		}
-		Debug.Log (TimeCombo);
-		}
+	}
 	void AttackSword (){
 		if (tocaChao && AnimaCombo == 0) {
 			anim.SetTrigger ("Sword1");
-		//	AnimaCombo = 1;
 		}
 	}
 	 void  OnTriggerEnter2D (Collider2D other){
@@ -167,9 +166,17 @@ public class PlayerController : MonoBehaviour {
 			if (tocaChao) {
 				anim.SetTrigger ("Hurt");
 				Health--;
+				if (Health < 1) {
+					anim.SetTrigger("Dead");
+					isAlive = false;
+				}
 			} else {
 				anim.SetTrigger ("Fall Hurt");
 				Health--;
+				if (Health < 1) {
+					anim.SetTrigger("Dead");
+					isAlive = false;
+				}
 			}
 			if (Health < 1) {
 				anim.SetTrigger("Dead");
