@@ -6,14 +6,15 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour {
 	private Animator anim;
+	public GameObject attackcheck;
 	private Rigidbody2D rb2d;
-	public Transform posPe, WallCheck;
-	public LayerMask Ground;
+	public Transform posPe, WallCheck, AttackCheck;
+	public LayerMask Ground, EnemyLayer;
 	[HideInInspector] public bool touchWall = false, tocaChao = false, viradoDireita = true;
-	public float ForcaPulo = 1000f,  Velocidade, slideSpeed = 5f, TimeMaxCombo = 0.1f, TimeCombo = 0f;
+	public float ForcaPulo = 1000f,  Velocidade, slideSpeed = 5f, timeAttack;
 	public bool jump,  SideCheck, isSlide = false, isAlive = true;
-	public BoxCollider2D bc, slidecol;
-	public WaitForSeconds slidetime;
+	public BoxCollider2D bc, slidecol,attackcol;
+	public WaitForSeconds attacktime;
 	public int AnimaCombo = 0, Health;
 
 	void Start () {
@@ -21,7 +22,7 @@ public class PlayerController : MonoBehaviour {
 		rb2d = GetComponent<Rigidbody2D> ();
 		bc = bc.GetComponent<BoxCollider2D> ();
 		slidecol.enabled = false;
-		TimeMaxCombo=0.1f;
+		attackcheck.SetActive (false);
 	}
 	void Update () {
 		//The groundcheck
@@ -39,19 +40,14 @@ public class PlayerController : MonoBehaviour {
 		if (Input.GetKeyDown (KeyCode.LeftShift)) {
 			Doslide ();
 		}
-		if (Input.GetKeyDown (KeyCode.U)) {
-			AttackSword ();
-		}
-		if (Input.GetKeyDown (KeyCode.J)) {
-			AttackHand ();
-		
-		}
-		if (TimeCombo > TimeMaxCombo) {
-			AnimaCombo = 0;
-			TimeCombo = 0f;
-		}
+		if (Input.GetKeyDown (KeyCode.U) && timeAttack <= 0) {
+				AttackSword ();
+			}
+		/*	if (Input.GetKeyDown (KeyCode.J)) {
+				AttackHand ();
+			}*/
+		timeAttack -= Time.deltaTime;
 	}
-
 	void FixedUpdate()
 	{
 		if(isAlive == false){
@@ -71,7 +67,7 @@ public class PlayerController : MonoBehaviour {
 		transform.Translate (translationX, translationY, 0);
 		transform.Rotate (0, 0, 0);
 		//Animations
-		if (translationX != 0 && tocaChao ) {
+		if (translationX != 0 && tocaChao)  {
 			anim.SetTrigger ("Run");
 		   bc.size = new Vector3 (0.7746387f, 1.127496f, 0);
 			bc.offset = new Vector3 (0.1723526f, -0.1373274f, 0);
@@ -101,7 +97,6 @@ public class PlayerController : MonoBehaviour {
 			anim.SetBool ("Wall Slide", false);
 			bc.size = new Vector3 (0.4929347f, 0.9783585f, 0);
 			bc.offset = new Vector3 (0.1226404f, -0.0627588f, 0);
-			Debug.Log ("Fall");
 		}	
 		if (tocaChao) {
 			anim.SetBool ("Fall", false);
@@ -113,7 +108,6 @@ public class PlayerController : MonoBehaviour {
 			rb2d.AddForce (new Vector2 (0f, ForcaPulo));
 			anim.SetTrigger ("Jump");
 			anim.SetBool ("Wall Slide", false);
-
 		}
 }
 	//Flip script
@@ -145,7 +139,7 @@ public class PlayerController : MonoBehaviour {
 		bc.enabled = true;
 		isSlide = false;
 		}
-	void AttackHand(){
+/*	void AttackHand(){
 		if (tocaChao && AnimaCombo == 0) {
 			anim.SetTrigger ("Punch1");
 			AnimaCombo = 1;
@@ -155,13 +149,23 @@ public class PlayerController : MonoBehaviour {
 		} else if (tocaChao && AnimaCombo == 2) {
 			anim.SetTrigger ("Punch3");
 		}
-	}
+	}*/
 	void AttackSword (){
 		if (tocaChao && AnimaCombo == 0) {
+			attackcheck.SetActive (true);
 			anim.SetTrigger ("Sword1");
+			StartCoroutine ("stopAttack");
+			timeAttack = 0.7f;
 		}
 	}
+	IEnumerator stopAttack(){
+	 yield return new WaitForSeconds(1f);
+		attackcheck.SetActive (false);
+	}
 	 void  OnTriggerEnter2D (Collider2D other){
+		if (!isAlive) {
+			return;
+		}
 		if (other.gameObject.CompareTag ("Obstacle")) {
 			if (tocaChao) {
 				anim.SetTrigger ("Hurt");

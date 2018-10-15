@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour {
 
+	public GameObject EnemyAttack;
 	public int health, speed;
 	protected Rigidbody2D rb2d;
-	public float AttackRay;
+	public float AttackRay, PlayerRay, timeAttack;
 	protected Animator anim;
 	protected SpriteRenderer sprite;
-	protected bool isMoving = false, right = true;
+	protected bool isMoving = false, right = true, hurt, canHurt,FrontPlayer = false;
 	public Transform player;
 
 	void Awake () {
@@ -17,6 +18,9 @@ public class EnemyController : MonoBehaviour {
 		rb2d = GetComponent<Rigidbody2D> ();
 		anim = GetComponent<Animator> ();
 		player = GameObject.Find ("Player").GetComponent<Transform> ();
+		AttackRay = 7;
+		PlayerRay = 1;
+		canHurt = true;
 	}
 	protected  float PlayerPosition () {
 		return Vector2.Distance(player.position, transform.position);

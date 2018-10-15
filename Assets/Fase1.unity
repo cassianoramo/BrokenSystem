@@ -8158,6 +8158,60 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!1 &1278368875
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1278368876}
+  - component: {fileID: 1278368877}
+  m_Layer: 0
+  m_Name: AttackCheck
+  m_TagString: Attack
+  m_Icon: {fileID: -1577725955494882426, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1278368876
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1278368875}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.439, y: 0.056, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2028436090}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1278368877
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1278368875}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.16763854, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.6206075, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1285059531
 GameObject:
   m_ObjectHideFlags: 0
@@ -12843,10 +12897,6 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 592805646}
-    - target: {fileID: 1772146844650302, guid: 43b74fd354d310d4dbe16c4e20639c82, type: 2}
-      propertyPath: m_Name
-      value: Enemy
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 43b74fd354d310d4dbe16c4e20639c82, type: 2}
   m_IsPrefabParent: 0
@@ -13720,7 +13770,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5eaeb07abd371e041bf6493379ee865c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: acbbf4076f33fd440a9fef980d5dc109, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -13737,13 +13787,14 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2028436087}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.02, y: 2.936, z: 0}
+  m_LocalPosition: {x: 0.18, y: 2.936, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 592805646}
   - {fileID: 774377706}
   - {fileID: 1435833748}
   - {fileID: 2080990387}
+  - {fileID: 1278368876}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13758,25 +13809,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3dceafdab419644d844eb7502f05c4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackcheck: {fileID: 1278368875}
   posPe: {fileID: 592805646}
   WallCheck: {fileID: 2080990387}
+  AttackCheck: {fileID: 1278368876}
   Ground:
     serializedVersion: 2
     m_Bits: 256
+  EnemyLayer:
+    serializedVersion: 2
+    m_Bits: 512
   touchWall: 0
   tocaChao: 0
   viradoDireita: 1
   ForcaPulo: 335
   Velocidade: 0.2
   slideSpeed: 0
-  TimeMaxCombo: 0
-  TimeCombo: 0
+  timeAttack: 0
   jump: 0
   SideCheck: 0
   isSlide: 0
   isAlive: 1
   bc: {fileID: 2028436088}
   slidecol: {fileID: 1435833749}
+  attackcol: {fileID: 0}
   AnimaCombo: 0
   Health: 8
 --- !u!95 &2028436092
