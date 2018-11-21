@@ -4,14 +4,11 @@ using UnityEngine;
 
 public class BossController : EnemyController {
 
-	public BoxCollider2D bcAttack;
-	public GameObject BossAttack;
 
 	void Start () {
-		bcAttack = GetComponent<BoxCollider2D> ();
 		health = 10;
-		BossAttack.SetActive (false);
 		PlayerRay = 2.5f;
+		EnemyAttack.SetActive (false);
 	}
 
 	void Update () {
@@ -39,8 +36,6 @@ public class BossController : EnemyController {
 			}
 			AttackingBoss = true;
 			anim.SetTrigger ("AttackBoss1");
-			BossAttack.SetActive (true);
-			//AttackEnemy ();
 			canHurt = false;
 		}
 	}
@@ -95,17 +90,15 @@ public class BossController : EnemyController {
 		transform.localScale = escala;
 	}
 	public void AttackBoss(){
-		//BossAttack.SetActive (true);
-		bcAttack.size = new Vector3 (10.70534f, 2.510119f, 0);
-		bcAttack.offset = new Vector3 (0.4229562f, -1.104609f, 0);
+		EnemyAttack.SetActive (true);
 		Debug.Log ("AttackEnemy");
 		StartCoroutine ("stopAttack");
 		timeAttack = 1.5f;
 	}
 	IEnumerator stopAttack(){
-		yield return new WaitForSeconds(0.1f);
+		yield return new WaitForSeconds(1f);
 		Debug.Log ("StopAttack");
-		BossAttack.SetActive (false);
+		EnemyAttack.SetActive (false);
 		AttackingBoss = false;
 		canHurt = true;
 		hurt = false;

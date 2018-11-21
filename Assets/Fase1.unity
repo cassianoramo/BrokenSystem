@@ -10553,16 +10553,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 717228195228fc647acbe19550228df4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyAttack: {fileID: 0}
+  EnemyAttack: {fileID: 948480513}
   health: 2
   speed: 2
   bcEnemy: {fileID: 1522099233}
+  bcAttack: {fileID: 948480515}
   AttackRay: 20
   PlayerRay: 2
   timeAttack: 0
   player: {fileID: 2028436090}
-  bcAttack: {fileID: 948480515}
-  BossAttack: {fileID: 948480513}
 --- !u!50 &1522099235
 Rigidbody2D:
   serializedVersion: 4
@@ -10577,7 +10576,7 @@ Rigidbody2D:
   m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 10
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
