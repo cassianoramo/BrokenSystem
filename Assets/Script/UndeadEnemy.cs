@@ -3,12 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class UndeadEnemy : EnemyController {
-
+	
 	void Start () {
-		health = 3;
+		health = 4;
 		EnemyAttack.SetActive (false);
+		PlayerRay = 1;
 	}
 	void Update () {
+		if (isAlive == false) {
+			return;
+		}
 		float distance = PlayerPosition ();
 		isMoving = (distance <= AttackRay);
 		FrontPlayer = (distance <= PlayerRay); 
@@ -54,10 +58,17 @@ public class UndeadEnemy : EnemyController {
 			anim.SetTrigger ("EnemyIdle");
 			AttackRay = 7;
 		}
+		if (health <= 0) {
+			anim.SetTrigger ("EnemyDead");
+			isAlive = false;
+			bcEnemy.size = new Vector3 (1.183126f, 0.0465185f, 0);
+			bcEnemy.offset = new Vector3 (-0.02128273f,-0.8141115f, 0);
+		}
 	}
 	void OnTriggerEnter2D(Collider2D AttackCheck) {
 		if (AttackCheck.gameObject.CompareTag ("Attack")&& canHurt) {
 			anim.SetTrigger ("EnemyHurt");
+			health -= 1;
 			AttackRay = 0;
 			hurt = true;
 			canHurt = false;
@@ -71,5 +82,4 @@ public class UndeadEnemy : EnemyController {
 		canHurt = true;
 		}
 	}
-
 

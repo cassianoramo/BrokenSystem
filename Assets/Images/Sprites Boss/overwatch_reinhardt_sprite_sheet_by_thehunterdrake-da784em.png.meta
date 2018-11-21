@@ -1,0 +1,1095 @@
+fileFormatVersion: 2
+guid: 68029d170b179fd4d92f16fd567a674a
+timeCreated: 1542765926
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_0
+    21300002: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_1
+    21300004: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_2
+    21300006: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_3
+    21300008: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_4
+    21300010: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_5
+    21300012: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_6
+    21300014: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_7
+    21300016: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_8
+    21300018: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_9
+    21300020: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_10
+    21300022: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_11
+    21300024: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_12
+    21300026: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_13
+    21300028: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_14
+    21300030: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_15
+    21300032: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_16
+    21300034: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_17
+    21300036: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_18
+    21300038: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_19
+    21300040: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_20
+    21300042: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_21
+    21300044: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_22
+    21300046: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_23
+    21300048: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_24
+    21300050: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_25
+    21300052: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_26
+    21300054: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_27
+    21300056: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_28
+    21300058: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_29
+    21300060: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_30
+    21300062: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_31
+    21300064: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_32
+    21300066: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_33
+    21300068: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_34
+    21300070: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_35
+    21300072: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_36
+    21300074: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_37
+    21300076: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_38
+    21300078: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_39
+    21300080: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_40
+    21300082: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_41
+    21300084: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_42
+    21300086: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_43
+    21300088: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_44
+    21300090: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_45
+    21300092: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_46
+    21300094: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_47
+    21300096: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_48
+    21300098: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_49
+    21300100: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_50
+    21300102: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_51
+    21300104: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_52
+    21300106: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_53
+    21300108: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_54
+    21300110: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_55
+    21300112: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_56
+    21300114: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_57
+    21300116: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_58
+    21300118: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_59
+    21300120: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_60
+    21300122: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_61
+    21300124: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_62
+    21300126: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_63
+    21300128: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_64
+    21300130: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_65
+    21300132: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_66
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 8
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 745
+        width: 48
+        height: 94
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_1
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 745
+        width: 48
+        height: 94
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_2
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 745
+        width: 50
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_3
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 745
+        width: 51
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_4
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 745
+        width: 51
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_5
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 745
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_6
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 745
+        width: 54
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_7
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 688
+        width: 54
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_8
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 688
+        width: 54
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_9
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 630
+        width: 52
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_10
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 630
+        width: 53
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_11
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 630
+        width: 51
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_12
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 630
+        width: 46
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_13
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 629
+        width: 42
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_14
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 629
+        width: 40
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_15
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 629
+        width: 44
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_16
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 629
+        width: 50
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_17
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 629
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_18
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 629
+        width: 53
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_19
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 572
+        width: 54
+        height: 56
+      alignment: 9
+      pivot: {x: 0.34211087, y: 0.5000011}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_20
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 572
+        width: 53
+        height: 54
+      alignment: 9
+      pivot: {x: 0.34449407, y: 0.5000011}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_21
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 572
+        width: 69
+        height: 53
+      alignment: 9
+      pivot: {x: 0.2981764, y: 0.5000011}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_22
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 572
+        width: 67
+        height: 53
+      alignment: 9
+      pivot: {x: 0.29639378, y: 0.5000011}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_23
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 572
+        width: 53
+        height: 54
+      alignment: 9
+      pivot: {x: 0.3337696, y: 0.5000011}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_24
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 508
+        width: 38
+        height: 63
+      alignment: 9
+      pivot: {x: 0.5137187, y: 0.4451081}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_25
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 508
+        width: 52
+        height: 56
+      alignment: 9
+      pivot: {x: 0.68088, y: 0.5273361}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_26
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 508
+        width: 50
+        height: 56
+      alignment: 9
+      pivot: {x: 0.67207044, y: 0.5216653}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_27
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 508
+        width: 95
+        height: 53
+      alignment: 9
+      pivot: {x: 0.24451005, y: 0.5553727}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_28
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 508
+        width: 43
+        height: 52
+      alignment: 9
+      pivot: {x: 0.5961382, y: 0.5606584}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_29
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 508
+        width: 42
+        height: 53
+      alignment: 9
+      pivot: {x: 0.562383, y: 0.55847627}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_30
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 508
+        width: 53
+        height: 53
+      alignment: 9
+      pivot: {x: 0.37269968, y: 0.5374698}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_31
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 423
+        width: 48
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_32
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 423
+        width: 60
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_33
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 423
+        width: 58
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_34
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 423
+        width: 59
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_35
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 417
+        width: 72
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_36
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 416
+        width: 70
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_37
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 422
+        width: 69
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_38
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 423
+        width: 63
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_39
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 357
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_40
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 357
+        width: 54
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_41
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 357
+        width: 55
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_42
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 357
+        width: 49
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_43
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 357
+        width: 51
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_44
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 358
+        width: 53
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_45
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 270
+        width: 56
+        height: 55
+      alignment: 9
+      pivot: {x: 0.50000006, y: 0.40671775}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_46
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 260
+        width: 42
+        height: 80
+      alignment: 9
+      pivot: {x: 0.49418312, y: 0.40838355}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_47
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 260
+        width: 51
+        height: 67
+      alignment: 9
+      pivot: {x: 0.50958073, y: 0.3541428}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_48
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 280
+        width: 70
+        height: 51
+      alignment: 9
+      pivot: {x: 0.5034903, y: 0.18862377}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_49
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 292
+        width: 75
+        height: 51
+      alignment: 9
+      pivot: {x: 0.5, y: 0.116767436}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_50
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 295
+        width: 71
+        height: 62
+      alignment: 9
+      pivot: {x: 0.50688195, y: 0.2241654}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_51
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 288
+        width: 56
+        height: 69
+      alignment: 9
+      pivot: {x: 0.48701423, y: 0.23157224}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_52
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 212
+        width: 54
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_53
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 118
+        width: 31
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_54
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 60
+        width: 71
+        height: 57
+      alignment: 9
+      pivot: {x: 0.52308184, y: 0.16243958}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_55
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 65
+        width: 76
+        height: 47
+      alignment: 9
+      pivot: {x: 0.51020414, y: 0.2998232}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_56
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 65
+        width: 85
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_57
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 65
+        width: 85
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_58
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 66
+        width: 86
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_59
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 66
+        width: 86
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_60
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 6
+        width: 70
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_61
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 6
+        width: 58
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_62
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 6
+        width: 58
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_63
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 1
+        width: 51
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_64
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 3
+        width: 45
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_65
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 13
+        width: 35
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: overwatch_reinhardt_sprite_sheet_by_thehunterdrake-da784em_66
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 13
+        width: 51
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

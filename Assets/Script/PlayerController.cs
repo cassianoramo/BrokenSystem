@@ -157,6 +157,12 @@ public class PlayerController : MonoBehaviour {
 			StartCoroutine ("stopAttack");
 			timeAttack = 0.7f;
 		}
+		if (!tocaChao && AnimaCombo == 0) {
+			attackcheck.SetActive (true);
+			anim.SetTrigger ("AirAttack1");
+			StartCoroutine ("stopAttack");
+			timeAttack = 0.7f;
+		}
 	}
 	IEnumerator stopAttack(){
 	 yield return new WaitForSeconds(1f);
