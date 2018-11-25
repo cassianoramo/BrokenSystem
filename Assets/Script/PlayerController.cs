@@ -176,17 +176,9 @@ public class PlayerController : MonoBehaviour {
 			if (tocaChao) {
 				anim.SetTrigger ("Hurt");
 				Health--;
-				if (Health < 1) {
-					anim.SetTrigger("Dead");
-					isAlive = false;
-				}
 			} else {
 				anim.SetTrigger ("Fall Hurt");
 				Health--;
-				if (Health < 1) {
-					anim.SetTrigger("Dead");
-					isAlive = false;
-				}
 			}
 			if (Health < 1) {
 				anim.SetTrigger("Dead");

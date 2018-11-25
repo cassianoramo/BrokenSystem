@@ -1,17 +1,28 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BossController : EnemyController {
 
+	public Slider healthbar;
+	public float TimeAttack = 0;
+	public int AttackNum, AttackOrder;
+	public float ForcaPulo = 1000f;
 
 	void Start () {
-		health = 10;
+		health = 20;
 		PlayerRay = 2.5f;
 		EnemyAttack.SetActive (false);
+		AttackNum = 0;
+		AttackOrder = -1;
+		bcEnemy.size = new Vector3 (4.573245f, 6.431195f, 0);
+		bcEnemy.offset = new Vector3 (-0.832418f, -0.05688047f, 0);
 	}
 
 	void Update () {
+		TimeAttack += Time.deltaTime;
+		healthbar.value = health;
 		if (isAlive == false) {
 			return;
 		}
@@ -36,13 +47,29 @@ public class BossController : EnemyController {
 			}
 			AttackingBoss = true;
 			anim.SetTrigger ("AttackBoss1");
+			AttackOrder = 0;
 			canHurt = false;
+		}
+		if (TimeAttack >= 10f && AttackNum == 0) {
+			anim.SetTrigger ("AttackBoss3");
+			bcEnemy.size = new Vector3 (3.150693f, 9.90391f, 0);
+			bcEnemy.offset = new Vector3 (0.7156613f, 4.231712f, 0);
+			TimeAttack = 0;
+			AttackNum = 1;
+			AttackOrder = 1;
+			AttackBoss ();
+		}
+		if (TimeAttack >= 10f && AttackNum == 1) {
+			anim.SetTrigger ("AttackBoss2");
+			TimeAttack = 0;
+			AttackOrder = 2;
+			AttackNum = 0;
 		}
 	}
 	void FixedUpdate(){
 		
 		if (isMoving) {
-			if (hurt || AttackingBoss) {
+			if (hurt /*|| AttackingBoss*/) {
 				return;
 			}
 			rb2d.velocity = new Vector2 (speed, rb2d.velocity.y);
@@ -79,8 +106,8 @@ public class BossController : EnemyController {
 	}
 	IEnumerator Deadbc (){
 		yield return new WaitForSeconds(0.5f);
-		bcEnemy.size = new Vector3 (5.077364f, 0.3983829f, 0);
-		bcEnemy.offset = new Vector3 (-0.5803585f,-3.667428f, 0);
+		bcEnemy.size = new Vector3 (5.077364f, 0.2784014f, 0);
+		bcEnemy.offset = new Vector3 (-0.5803585f,-3.133277f, 0);
 	}
 	public void Flip1(){
 		speed *= -1;
@@ -91,17 +118,28 @@ public class BossController : EnemyController {
 	}
 	public void AttackBoss(){
 		EnemyAttack.SetActive (true);
-		Debug.Log ("AttackEnemy");
+		if (AttackOrder == 1) {
+			bcAttack.offset = new Vector3 (1.062162f, 1.295644f, 0);
+			bcAttack.size = new Vector3 (5.148201f, 9.189079f, 0);
+		} else if (AttackOrder == 2) {
+			bcAttack.offset = new Vector3 (0, 0, 0);
+			bcAttack.size = new Vector3 (0, 0, 0);
+		} else if (AttackOrder == 0) {
+			bcAttack.offset = new Vector3 (0.4229562f, -1.104609f, 0);
+			bcAttack.size = new Vector3 (10.70534f, 2.510119f, 0);
+		}
 		StartCoroutine ("stopAttack");
 		timeAttack = 1.5f;
 	}
 	IEnumerator stopAttack(){
-		yield return new WaitForSeconds(1f);
-		Debug.Log ("StopAttack");
+			yield return new WaitForSeconds (0.1f);
+		anim.SetTrigger ("StandBoss");
+		Update ();
 		EnemyAttack.SetActive (false);
 		AttackingBoss = false;
 		canHurt = true;
 		hurt = false;
 	}
+
 }
 
