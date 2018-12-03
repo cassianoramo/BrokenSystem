@@ -8,7 +8,12 @@ public class BossController : EnemyController {
 	public Slider healthbar;
 	public float TimeAttack = 0;
 	public int AttackNum, AttackOrder;
-	public float ForcaPulo = 1000f;
+	//private float tempodetiro = 0.1f;
+	//private float controledetiro = 0f;
+	public Transform impactposition;
+	public Transform impactposition1;
+	public GameObject impact;
+	public GameObject impact1;
 
 	void Start () {
 		health = 20;
@@ -57,7 +62,6 @@ public class BossController : EnemyController {
 			TimeAttack = 0;
 			AttackNum = 1;
 			AttackOrder = 1;
-			AttackBoss ();
 		}
 		if (TimeAttack >= 10f && AttackNum == 1) {
 			anim.SetTrigger ("AttackBoss2");
@@ -118,12 +122,15 @@ public class BossController : EnemyController {
 	}
 	public void AttackBoss(){
 		EnemyAttack.SetActive (true);
+
 		if (AttackOrder == 1) {
 			bcAttack.offset = new Vector3 (1.062162f, 1.295644f, 0);
 			bcAttack.size = new Vector3 (5.148201f, 9.189079f, 0);
+			Impact ();
 		} else if (AttackOrder == 2) {
-			bcAttack.offset = new Vector3 (0, 0, 0);
-			bcAttack.size = new Vector3 (0, 0, 0);
+			bcAttack.offset = new Vector3 (0.5857995f, 0.5426848f, 0);
+			bcAttack.size = new Vector3 (4.195472f, 1.966824f, 0);
+			Impact1 ();
 		} else if (AttackOrder == 0) {
 			bcAttack.offset = new Vector3 (0.4229562f, -1.104609f, 0);
 			bcAttack.size = new Vector3 (10.70534f, 2.510119f, 0);
@@ -140,6 +147,23 @@ public class BossController : EnemyController {
 		canHurt = true;
 		hurt = false;
 	}
+	void Impact(){
+		//if (controledetiro <= 0f) {
+	    if (impact != null) {
+			var cloneimpact = Instantiate (impact, impactposition.position, Quaternion.identity) as GameObject;
+				cloneimpact.transform.localScale = this.transform.localScale;
+				Destroy (cloneimpact,10f);
+			}
+         }
+	void Impact1(){
+		//if (controledetiro <= 0f) {
+		if (impact1 != null) {
+			var cloneimpact = Instantiate (impact1, impactposition1.position, Quaternion.identity) as GameObject;
+			cloneimpact.transform.localScale = this.transform.localScale;
+			Destroy (cloneimpact,10f);
+		}
+	}
+	}
 
-}
+
 

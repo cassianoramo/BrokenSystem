@@ -11,7 +11,7 @@ public class EnemyController : MonoBehaviour {
 	public float AttackRay, PlayerRay, timeAttack;
 	protected Animator anim;
 	protected SpriteRenderer sprite;
-	protected bool isMoving = false, right = true, hurt, canHurt,FrontPlayer = false,isAlive = true, AttackingBoss = false;
+	[HideInInspector]public bool isMoving = false, right = true, hurt, canHurt,FrontPlayer = false,isAlive = true, AttackingBoss = false;
 	public Transform player;
 
 	void Awake () {

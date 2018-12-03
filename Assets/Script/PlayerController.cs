@@ -43,7 +43,7 @@ public class PlayerController : MonoBehaviour {
 		if (Input.GetKeyDown (KeyCode.U) && timeAttack <= 0) {
 				AttackSword ();
 			}
-		/*	if (Input.GetKeyDown (KeyCode.J)) {
+	/*	if (Input.GetKeyDown (KeyCode.J)) {
 				AttackHand ();
 			}*/
 		timeAttack -= Time.deltaTime;
@@ -139,7 +139,7 @@ public class PlayerController : MonoBehaviour {
 		bc.enabled = true;
 		isSlide = false;
 		}
-/*	void AttackHand(){
+	/*void AttackHand(){
 		if (tocaChao && AnimaCombo == 0) {
 			anim.SetTrigger ("Punch1");
 			AnimaCombo = 1;
