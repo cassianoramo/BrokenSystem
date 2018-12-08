@@ -7,7 +7,7 @@ public class EnemyController : MonoBehaviour {
 	public GameObject EnemyAttack;
 	public int health, speed;
 	protected Rigidbody2D rb2d;
-	public BoxCollider2D bcEnemy, bcAttack;
+	public BoxCollider2D bcEnemy, bcAttack, bcGround;
 	public float AttackRay, PlayerRay, timeAttack;
 	protected Animator anim;
 	protected SpriteRenderer sprite;

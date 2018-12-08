@@ -21,9 +21,9 @@ GameObject:
   - component: {fileID: 4427799139041952}
   - component: {fileID: 212830395796422828}
   - component: {fileID: 50952476294675470}
-  - component: {fileID: 114154246830656988}
   - component: {fileID: 61017422439059442}
   - component: {fileID: 82870551696574154}
+  - component: {fileID: 114856640121406080}
   m_Layer: 9
   m_Name: Impact
   m_TagString: Obstacle
@@ -80,7 +80,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.48208568, y: 0.3668014}
-    oldSize: {x: 2, y: 5.3125}
+    oldSize: {x: 4, y: 10.625}
     newSize: {x: 0.32, y: 0.85}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -169,7 +169,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!114 &114154246830656988
+--- !u!114 &114856640121406080
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -177,11 +177,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1865837342030380}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: edb4ccea177cc2b4bbb0d91d9debdaa5, type: 3}
+  m_Script: {fileID: 11500000, guid: 7005fc77d7bf9214f80db27cc053a49a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: {x: 20, y: 0}
   player: {fileID: 4626070265694678, guid: edbeadcaa2900444dbf90a5bd9924fc4, type: 2}
+  impactbc: {fileID: 0}
 --- !u!212 &212830395796422828
 SpriteRenderer:
   m_ObjectHideFlags: 1

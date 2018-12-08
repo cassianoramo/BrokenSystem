@@ -8,15 +8,19 @@ public class BossController : EnemyController {
 	public Slider healthbar;
 	public float TimeAttack = 0;
 	public int AttackNum, AttackOrder;
-	//private float tempodetiro = 0.1f;
-	//private float controledetiro = 0f;
 	public Transform impactposition;
 	public Transform impactposition1;
 	public GameObject impact;
 	public GameObject impact1;
+	public AudioClip AudioHit;
+	public AudioClip AudioHurt;
+	public AudioClip AudioDeath;
+	private AudioSource source;
 
 	void Start () {
-		health = 20;
+		bcGround = GetComponent<BoxCollider2D> ();
+		source = GetComponent<AudioSource> ();
+		health = 10;
 		PlayerRay = 2.5f;
 		EnemyAttack.SetActive (false);
 		AttackNum = 0;
@@ -55,7 +59,7 @@ public class BossController : EnemyController {
 			AttackOrder = 0;
 			canHurt = false;
 		}
-		if (TimeAttack >= 10f && AttackNum == 0) {
+		if (TimeAttack >= 20f && AttackNum == 0) {
 			anim.SetTrigger ("AttackBoss3");
 			bcEnemy.size = new Vector3 (3.150693f, 9.90391f, 0);
 			bcEnemy.offset = new Vector3 (0.7156613f, 4.231712f, 0);
@@ -63,7 +67,7 @@ public class BossController : EnemyController {
 			AttackNum = 1;
 			AttackOrder = 1;
 		}
-		if (TimeAttack >= 10f && AttackNum == 1) {
+		if (TimeAttack >= 20f && AttackNum == 1) {
 			anim.SetTrigger ("AttackBoss2");
 			TimeAttack = 0;
 			AttackOrder = 2;
@@ -73,7 +77,7 @@ public class BossController : EnemyController {
 	void FixedUpdate(){
 		
 		if (isMoving) {
-			if (hurt /*|| AttackingBoss*/) {
+			if (hurt ) {
 				return;
 			}
 			rb2d.velocity = new Vector2 (speed, rb2d.velocity.y);
@@ -98,6 +102,7 @@ public class BossController : EnemyController {
 			AttackRay = 0;
 			hurt = true;
 			canHurt = false;
+			source.PlayOneShot (AudioHurt);
 			Debug.Log ("Enemy Hurt");
 			StartCoroutine ("stopHurt");
 		}
@@ -110,6 +115,7 @@ public class BossController : EnemyController {
 	}
 	IEnumerator Deadbc (){
 		yield return new WaitForSeconds(0.5f);
+		bcGround.enabled = false;
 		bcEnemy.size = new Vector3 (5.077364f, 0.2784014f, 0);
 		bcEnemy.offset = new Vector3 (-0.5803585f,-3.133277f, 0);
 	}
@@ -122,7 +128,7 @@ public class BossController : EnemyController {
 	}
 	public void AttackBoss(){
 		EnemyAttack.SetActive (true);
-
+		source.PlayOneShot (AudioHit);
 		if (AttackOrder == 1) {
 			bcAttack.offset = new Vector3 (1.062162f, 1.295644f, 0);
 			bcAttack.size = new Vector3 (5.148201f, 9.189079f, 0);
@@ -148,7 +154,6 @@ public class BossController : EnemyController {
 		hurt = false;
 	}
 	void Impact(){
-		//if (controledetiro <= 0f) {
 	    if (impact != null) {
 			var cloneimpact = Instantiate (impact, impactposition.position, Quaternion.identity) as GameObject;
 				cloneimpact.transform.localScale = this.transform.localScale;
@@ -156,7 +161,6 @@ public class BossController : EnemyController {
 			}
          }
 	void Impact1(){
-		//if (controledetiro <= 0f) {
 		if (impact1 != null) {
 			var cloneimpact = Instantiate (impact1, impactposition1.position, Quaternion.identity) as GameObject;
 			cloneimpact.transform.localScale = this.transform.localScale;

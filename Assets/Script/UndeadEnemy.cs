@@ -3,9 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class UndeadEnemy : EnemyController {
-	
+
+	public AudioClip AudioHit;
+	private AudioSource source; 
+
 	void Start () {
-		health = 4;
+		source = GetComponent<AudioSource> ();
+		health = 3;
 		EnemyAttack.SetActive (false);
 		PlayerRay = 1;
 	}
@@ -38,6 +42,7 @@ public class UndeadEnemy : EnemyController {
 	}
 	public void AttackEnemy(){
 		EnemyAttack.SetActive (true);
+		source.PlayOneShot (AudioHit);
 		StartCoroutine ("stopAttack");
 		timeAttack = 1.5f;
 	}

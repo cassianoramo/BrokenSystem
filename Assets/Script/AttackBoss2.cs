@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AttackBoss : MonoBehaviour {
+public class AttackBoss2 : MonoBehaviour {
 	//Declara as variaveis de velocidade e de fisica do tiro
 	public  Vector2 speed = new Vector2 (20,0);
 	private Rigidbody2D rigidbodytiro;
@@ -11,8 +11,8 @@ public class AttackBoss : MonoBehaviour {
 	//Determina a velocidade do tiro e seu ponto de partida
 	void Start () {
 		impactbc = GetComponent<BoxCollider2D> ();
-		impactbc.offset = new Vector3 (0.08383061f, 0.2009127f, 0);
-		impactbc.size = new Vector3 (1.02046f, 3.324506f, 0);
+		impactbc.offset = new Vector3 (0.0838306f, 1.225725f, 0);
+		impactbc.size = new Vector3 (1.02046f, 3.507508f, 0);
 		rigidbodytiro = GetComponent<Rigidbody2D>();
 		rigidbodytiro.velocity = speed * this.transform.localScale.x;
 	}

@@ -16,11 +16,17 @@ public class PlayerController : MonoBehaviour {
 	public BoxCollider2D bc, slidecol,attackcol;
 	public WaitForSeconds attacktime;
 	public int AnimaCombo = 0, Health;
+	public AudioClip audiojump;
+	public AudioClip audiohurt;
+	public AudioClip audioattack;
+	public AudioClip audiodeath;
+	private AudioSource source;
 
 	void Start () {
 		anim = GetComponent<Animator> ();
 		rb2d = GetComponent<Rigidbody2D> ();
 		bc = bc.GetComponent<BoxCollider2D> ();
+		source = GetComponent<AudioSource> ();
 		slidecol.enabled = false;
 		attackcheck.SetActive (false);
 	}
@@ -36,12 +42,14 @@ public class PlayerController : MonoBehaviour {
 			bc.size = new Vector3 (0.4929347f, 0.8221698f, 0);
 			bc.offset = new Vector3 (0.1226404f, 0.01533556f, 0);
 			Jump ();
+			source.PlayOneShot (audiojump);
 		}
 		if (Input.GetKeyDown (KeyCode.LeftShift)) {
 			Doslide ();
 		}
 		if (Input.GetKeyDown (KeyCode.U) && timeAttack <= 0) {
 				AttackSword ();
+			source.PlayOneShot (audioattack);
 			}
 	/*	if (Input.GetKeyDown (KeyCode.J)) {
 				AttackHand ();
@@ -176,9 +184,11 @@ public class PlayerController : MonoBehaviour {
 			if (tocaChao) {
 				anim.SetTrigger ("Hurt");
 				Health--;
+				source.PlayOneShot (audiohurt);
 			} else {
 				anim.SetTrigger ("Fall Hurt");
 				Health--;
+				source.PlayOneShot (audiohurt);
 			}
 			if (Health < 1) {
 				anim.SetTrigger("Dead");
