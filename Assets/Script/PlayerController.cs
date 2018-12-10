@@ -191,12 +191,15 @@ public class PlayerController : MonoBehaviour {
 				source.PlayOneShot (audiohurt);
 			}
 			if (Health < 1) {
-				anim.SetTrigger("Dead");
+				anim.SetTrigger ("Dead");
 				isAlive = false;
 			}
 			jump = false;
 			anim.SetTrigger ("Stand Hand");
 			Update ();
+		}
+		if (other.gameObject.CompareTag ("Spike")) {
+			SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex + 1);
 		}
 	}
 }

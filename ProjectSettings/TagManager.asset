@@ -8,6 +8,7 @@ TagManager:
   - Wall
   - Attack
   - Boss
+  - Spike
   layers:
   - Default
   - TransparentFX
