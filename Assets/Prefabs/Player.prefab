@@ -560,6 +560,10 @@ MonoBehaviour:
   audiohurt: {fileID: 8300000, guid: 4f829f332abe98540b8d5681cf11b4ea, type: 3}
   audioattack: {fileID: 8300000, guid: 111297359eee0d94bb36e671fe3e0a60, type: 3}
   audiodeath: {fileID: 0}
+  GameOver: 0
+  Restart: 0
+  Restartt: {fileID: 0}
+  GameOverr: {fileID: 0}
 --- !u!124 &124524569031204282
 Behaviour:
   m_ObjectHideFlags: 1

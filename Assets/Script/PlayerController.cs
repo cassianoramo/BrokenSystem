@@ -21,6 +21,10 @@ public class PlayerController : MonoBehaviour {
 	public AudioClip audioattack;
 	public AudioClip audiodeath;
 	private AudioSource source;
+	public bool GameOver = false;
+	public bool Restart = false;
+	public GameObject Restartt;
+	public GameObject GameOverr;
 
 	void Start () {
 		anim = GetComponent<Animator> ();
@@ -32,6 +36,15 @@ public class PlayerController : MonoBehaviour {
 	}
 	void Update () {
 		//The groundcheck
+		if(Input.GetKeyDown(KeyCode.R) && Restart == true)
+		{
+			Debug.Log ("dfghjk");
+			SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex -1);
+		}
+		if (Input.GetKeyDown ("escape")) {
+			Debug.Log ("Quit");
+			//Application.Quit;
+		}
 		if(isAlive == false){
 			return;
 		}
@@ -51,7 +64,7 @@ public class PlayerController : MonoBehaviour {
 				AttackSword ();
 			source.PlayOneShot (audioattack);
 			}
-	/*	if (Input.GetKeyDown (KeyCode.J)) {
+		/*if (Input.GetKeyDown (KeyCode.J)) {
 				AttackHand ();
 			}*/
 		timeAttack -= Time.deltaTime;
@@ -193,6 +206,10 @@ public class PlayerController : MonoBehaviour {
 			if (Health < 1) {
 				anim.SetTrigger ("Dead");
 				isAlive = false;
+				GameOverr.SetActive(true);
+				Restartt.SetActive (true);
+				Restart = true;
+				Update ();
 			}
 			jump = false;
 			anim.SetTrigger ("Stand Hand");
@@ -203,3 +220,4 @@ public class PlayerController : MonoBehaviour {
 		}
 	}
 }
+

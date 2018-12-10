@@ -172,7 +172,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1895728686563008}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.88, y: 2.936, z: -6.09}
+  m_LocalPosition: {x: 61.28, y: -2.16, z: -6.09}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4370764067698366}
@@ -479,6 +479,10 @@ MonoBehaviour:
   audiohurt: {fileID: 8300000, guid: 4f829f332abe98540b8d5681cf11b4ea, type: 3}
   audioattack: {fileID: 8300000, guid: 111297359eee0d94bb36e671fe3e0a60, type: 3}
   audiodeath: {fileID: 0}
+  GameOver: 0
+  Restart: 0
+  Restartt: {fileID: 0}
+  GameOverr: {fileID: 0}
 --- !u!124 &124212037076390008
 Behaviour:
   m_ObjectHideFlags: 1

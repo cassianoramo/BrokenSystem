@@ -16,6 +16,7 @@ public class BossController : EnemyController {
 	public AudioClip AudioHurt;
 	public AudioClip AudioDeath;
 	private AudioSource source;
+	public GameObject Victorii;
 
 	void Start () {
 		bcGround = GetComponent<BoxCollider2D> ();
@@ -30,6 +31,10 @@ public class BossController : EnemyController {
 	}
 
 	void Update () {
+		if (Input.GetKeyDown ("escape")) {
+			Debug.Log ("Quit");
+			//Application.Quit;
+		}
 		TimeAttack += Time.deltaTime;
 		healthbar.value = health;
 		if (isAlive == false) {
@@ -88,6 +93,7 @@ public class BossController : EnemyController {
 		}
 		if (health <= 0) {
 			anim.SetTrigger ("DeadBoss");
+			Victorii.SetActive (true);
 			isAlive = false;
 			StartCoroutine ("Deadbc");
 		} else
