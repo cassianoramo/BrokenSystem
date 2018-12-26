@@ -17,8 +17,11 @@ public class BossController : EnemyController {
 	public AudioClip AudioDeath;
 	private AudioSource source;
 	public GameObject Victorii;
+	public Rigidbody2D rb2d;
 
 	void Start () {
+		isAlive = true;
+		rb2d = GetComponent<Rigidbody2D> ();
 		bcGround = GetComponent<BoxCollider2D> ();
 		source = GetComponent<AudioSource> ();
 		health = 10;
@@ -33,7 +36,7 @@ public class BossController : EnemyController {
 	void Update () {
 		if (Input.GetKeyDown ("escape")) {
 			Debug.Log ("Quit");
-			//Application.Quit;
+			Application.Quit();
 		}
 		TimeAttack += Time.deltaTime;
 		healthbar.value = health;
@@ -62,7 +65,7 @@ public class BossController : EnemyController {
 			AttackingBoss = true;
 			anim.SetTrigger ("AttackBoss1");
 			AttackOrder = 0;
-			canHurt = false;
+			//canHurt = false;
 		}
 		if (TimeAttack >= 20f && AttackNum == 0) {
 			anim.SetTrigger ("AttackBoss3");
@@ -80,9 +83,8 @@ public class BossController : EnemyController {
 		}
 	}
 	void FixedUpdate(){
-		
 		if (isMoving) {
-			if (hurt ) {
+			if (hurt) {
 				return;
 			}
 			rb2d.velocity = new Vector2 (speed, rb2d.velocity.y);
@@ -95,11 +97,13 @@ public class BossController : EnemyController {
 			anim.SetTrigger ("DeadBoss");
 			Victorii.SetActive (true);
 			isAlive = false;
+			rb2d.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
 			StartCoroutine ("Deadbc");
 		} else
 		bcEnemy.size = new Vector3 (4.573245f, 6.431195f, 0);
 		bcEnemy.offset = new Vector3 (-0.832418f, -0.05688047f, 0);
 	}
+
 
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.gameObject.CompareTag ("Attack")&& canHurt) {
@@ -134,6 +138,7 @@ public class BossController : EnemyController {
 	}
 	public void AttackBoss(){
 		EnemyAttack.SetActive (true);
+		canHurt = false;
 		source.PlayOneShot (AudioHit);
 		if (AttackOrder == 1) {
 			bcAttack.offset = new Vector3 (1.062162f, 1.295644f, 0);
@@ -153,9 +158,9 @@ public class BossController : EnemyController {
 	IEnumerator stopAttack(){
 			yield return new WaitForSeconds (0.1f);
 		anim.SetTrigger ("StandBoss");
+		AttackingBoss = false;
 		Update ();
 		EnemyAttack.SetActive (false);
-		AttackingBoss = false;
 		canHurt = true;
 		hurt = false;
 	}

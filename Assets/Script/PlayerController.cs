@@ -204,6 +204,7 @@ public class PlayerController : MonoBehaviour {
 				source.PlayOneShot (audiohurt);
 			}
 			if (Health < 1) {
+				anim.SetLayerWeight (1, 1);
 				anim.SetTrigger ("Dead");
 				isAlive = false;
 				GameOverr.SetActive(true);

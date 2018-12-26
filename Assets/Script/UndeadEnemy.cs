@@ -25,9 +25,9 @@ public class UndeadEnemy : EnemyController {
 				Flip ();
 			}
 		}
-		if (canHurt) {
+		/*if (canHurt) {
 			hurt = false;
-		}
+		}*/
 		timeAttack -= Time.deltaTime;
 		if (timeAttack >= 0) {
 			hurt = true;
@@ -37,7 +37,7 @@ public class UndeadEnemy : EnemyController {
 				return;
 			}
 			anim.SetTrigger ("EnemyAttack");
-			canHurt = false;
+			//canHurt = false;
 		}
 	}
 	public void AttackEnemy(){
@@ -49,7 +49,7 @@ public class UndeadEnemy : EnemyController {
 	IEnumerator stopAttack(){
 		yield return new WaitForSeconds(0.2f);
 		EnemyAttack.SetActive (false);
-		canHurt = true;
+		//canHurt = true;
 		hurt = false;
 	}
 	void FixedUpdate(){
@@ -76,7 +76,7 @@ public class UndeadEnemy : EnemyController {
 			health -= 1;
 			AttackRay = 0;
 			hurt = true;
-			canHurt = false;
+			//canHurt = false;
 			Debug.Log ("Enemy Hurt");
 			StartCoroutine ("stopHurt");
 		}
