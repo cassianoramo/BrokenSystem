@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class BossController : EnemyController {
 
@@ -41,6 +42,7 @@ public class BossController : EnemyController {
 		TimeAttack += Time.deltaTime;
 		healthbar.value = health;
 		if (isAlive == false) {
+			StartCoroutine ("GoMenu");
 			return;
 		}
 		float distance = PlayerPosition ();
@@ -178,7 +180,11 @@ public class BossController : EnemyController {
 			Destroy (cloneimpact,10f);
 		}
 	}
+	IEnumerator GoMenu (){
+		yield return new WaitForSeconds (4f);
+		SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex - 3);
 	}
+}
 
 
 

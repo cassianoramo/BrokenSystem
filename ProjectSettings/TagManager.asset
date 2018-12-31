@@ -9,6 +9,7 @@ TagManager:
   - Attack
   - Boss
   - Spike
+  - Fase1
   layers:
   - Default
   - TransparentFX

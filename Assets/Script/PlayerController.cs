@@ -216,8 +216,9 @@ public class PlayerController : MonoBehaviour {
 			anim.SetTrigger ("Stand Hand");
 			Update ();
 		}
-		if (other.gameObject.CompareTag ("Spike")) {
+		if (other.gameObject.CompareTag ("Fase1")) {
 			SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex + 1);
+			//UnityEngine.SceneManagement.SceneManager.LoadScene("Fase1");
 		}
 	}
 }
