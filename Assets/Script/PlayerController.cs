@@ -217,8 +217,12 @@ public class PlayerController : MonoBehaviour {
 			Update ();
 		}
 		if (other.gameObject.CompareTag ("Fase1")) {
-			SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex + 1);
-			//UnityEngine.SceneManagement.SceneManager.LoadScene("Fase1");
+			//SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex + 1);
+			SceneManager.LoadScene("Fase1");
+		}
+		if (other.gameObject.CompareTag ("Spike")) {
+			//SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex + 1);
+			SceneManager.LoadScene("Boss Fight");
 		}
 	}
 }
